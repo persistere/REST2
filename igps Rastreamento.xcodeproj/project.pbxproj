@@ -7,23 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252AC6F220A4EE7700E38061 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252AC6F120A4EE7700E38061 /* Car.swift */; };
+		252AC6F420A4F24900E38061 /* RESTCAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252AC6F320A4F24900E38061 /* RESTCAR.swift */; };
+		252AC6F620A4FADD00E38061 /* CarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252AC6F520A4FADD00E38061 /* CarsTableViewController.swift */; };
 		2566CB321FF9B6C3000FE434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566CB311FF9B6C3000FE434 /* AppDelegate.swift */; };
 		2566CB341FF9B6C3000FE434 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566CB331FF9B6C3000FE434 /* ViewController.swift */; };
 		2566CB371FF9B6C3000FE434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2566CB351FF9B6C3000FE434 /* Main.storyboard */; };
 		2566CB3A1FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2566CB381FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodeld */; };
-		2566CB3C1FF9B6C5000FE434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2566CB3B1FF9B6C5000FE434 /* Assets.xcassets */; };
 		2566CB3F1FF9B6C6000FE434 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2566CB3D1FF9B6C5000FE434 /* LaunchScreen.storyboard */; };
+		2566CB4920A26A07000FE434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2566CB4820A26A06000FE434 /* Assets.xcassets */; };
+		25692B4E20A9DAF7003FA93A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25692B4D20A9DAF7003FA93A /* Login.swift */; };
+		25692B5020A9DB06003FA93A /* RESTLOGIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25692B4F20A9DB06003FA93A /* RESTLOGIN.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2566CB2E1FF9B6C3000FE434 /* igps Rastreamento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "igps Rastreamento.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		252AC6F120A4EE7700E38061 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		252AC6F320A4F24900E38061 /* RESTCAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCAR.swift; sourceTree = "<group>"; };
+		252AC6F520A4FADD00E38061 /* CarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewController.swift; sourceTree = "<group>"; };
+		2566CB2E1FF9B6C3000FE434 /* igpsRastreamento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igpsRastreamento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2566CB311FF9B6C3000FE434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2566CB331FF9B6C3000FE434 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2566CB361FF9B6C3000FE434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2566CB391FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = igps_Rastreamento.xcdatamodel; sourceTree = "<group>"; };
-		2566CB3B1FF9B6C5000FE434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2566CB3E1FF9B6C6000FE434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2566CB401FF9B6C6000FE434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2566CB4820A26A06000FE434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25692B4D20A9DAF7003FA93A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		25692B4F20A9DB06003FA93A /* RESTLOGIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTLOGIN.swift; sourceTree = "<group>"; };
+		25692B5220A9EF55003FA93A /* Objc-md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-md5.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +51,7 @@
 		2566CB251FF9B6C3000FE434 = {
 			isa = PBXGroup;
 			children = (
+				25692B5220A9EF55003FA93A /* Objc-md5.h */,
 				2566CB301FF9B6C3000FE434 /* igps Rastreamento */,
 				2566CB2F1FF9B6C3000FE434 /* Products */,
 			);
@@ -48,7 +60,7 @@
 		2566CB2F1FF9B6C3000FE434 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2566CB2E1FF9B6C3000FE434 /* igps Rastreamento.app */,
+				2566CB2E1FF9B6C3000FE434 /* igpsRastreamento.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +70,13 @@
 			children = (
 				2566CB311FF9B6C3000FE434 /* AppDelegate.swift */,
 				2566CB331FF9B6C3000FE434 /* ViewController.swift */,
+				252AC6F520A4FADD00E38061 /* CarsTableViewController.swift */,
+				252AC6F120A4EE7700E38061 /* Car.swift */,
+				25692B4D20A9DAF7003FA93A /* Login.swift */,
+				25692B4F20A9DB06003FA93A /* RESTLOGIN.swift */,
+				252AC6F320A4F24900E38061 /* RESTCAR.swift */,
+				2566CB4820A26A06000FE434 /* Assets.xcassets */,
 				2566CB351FF9B6C3000FE434 /* Main.storyboard */,
-				2566CB3B1FF9B6C5000FE434 /* Assets.xcassets */,
 				2566CB3D1FF9B6C5000FE434 /* LaunchScreen.storyboard */,
 				2566CB401FF9B6C6000FE434 /* Info.plist */,
 				2566CB381FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodeld */,
@@ -70,9 +87,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2566CB2D1FF9B6C3000FE434 /* igps Rastreamento */ = {
+		2566CB2D1FF9B6C3000FE434 /* igpsRastreamento */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2566CB431FF9B6C6000FE434 /* Build configuration list for PBXNativeTarget "igps Rastreamento" */;
+			buildConfigurationList = 2566CB431FF9B6C6000FE434 /* Build configuration list for PBXNativeTarget "igpsRastreamento" */;
 			buildPhases = (
 				2566CB2A1FF9B6C3000FE434 /* Sources */,
 				2566CB2B1FF9B6C3000FE434 /* Frameworks */,
@@ -82,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = "igps Rastreamento";
+			name = igpsRastreamento;
 			productName = "igps Rastreamento";
-			productReference = 2566CB2E1FF9B6C3000FE434 /* igps Rastreamento.app */;
+			productReference = 2566CB2E1FF9B6C3000FE434 /* igpsRastreamento.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2566CB2D1FF9B6C3000FE434 /* igps Rastreamento */,
+				2566CB2D1FF9B6C3000FE434 /* igpsRastreamento */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2566CB3F1FF9B6C6000FE434 /* LaunchScreen.storyboard in Resources */,
-				2566CB3C1FF9B6C5000FE434 /* Assets.xcassets in Resources */,
+				2566CB4920A26A07000FE434 /* Assets.xcassets in Resources */,
 				2566CB371FF9B6C3000FE434 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25692B4E20A9DAF7003FA93A /* Login.swift in Sources */,
+				25692B5020A9DB06003FA93A /* RESTLOGIN.swift in Sources */,
 				2566CB341FF9B6C3000FE434 /* ViewController.swift in Sources */,
 				2566CB3A1FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodeld in Sources */,
+				252AC6F420A4F24900E38061 /* RESTCAR.swift in Sources */,
+				252AC6F220A4EE7700E38061 /* Car.swift in Sources */,
+				252AC6F620A4FADD00E38061 /* CarsTableViewController.swift in Sources */,
 				2566CB321FF9B6C3000FE434 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,16 +306,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "igps Rastreamento/Info.plist";
+				DEVELOPMENT_TEAM = 4JE93M427Z;
+				INFOPLIST_FILE = "$(SRCROOT)/igps Rastreamento/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.igps.igps-Rastreamento";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.igps.IgpsRastreamento;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objc-md5.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,16 +328,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "igps Rastreamento/Info.plist";
+				DEVELOPMENT_TEAM = 4JE93M427Z;
+				INFOPLIST_FILE = "$(SRCROOT)/igps Rastreamento/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.igps.igps-Rastreamento";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.igps.IgpsRastreamento;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objc-md5.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -326,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2566CB431FF9B6C6000FE434 /* Build configuration list for PBXNativeTarget "igps Rastreamento" */ = {
+		2566CB431FF9B6C6000FE434 /* Build configuration list for PBXNativeTarget "igpsRastreamento" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2566CB441FF9B6C6000FE434 /* Debug */,
