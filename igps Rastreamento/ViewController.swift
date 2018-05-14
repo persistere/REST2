@@ -13,18 +13,9 @@ class ViewController: UIViewController {
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
-    
-    
-    
-    
-    
     @IBOutlet var tfUser: UITextField!
     @IBOutlet var tfPass: UITextField!
     @IBOutlet var btEnviar: UIButton!
-    
-    var user = "jbpribeiro";
-    var pass = "dd9e2080ceebd0ac714c47d0f8a6c934";//otavio
-    
     
     @IBAction func btEnviar(_ sender: UIButton) {
         
@@ -38,12 +29,11 @@ class ViewController: UIViewController {
             alerta(titulo: "Atenção", erro: "Por favor preencha o usuário e senha")
             activityIndicator.stopAnimating()
         } else {
-            user = tfUser.text!
-            pass = MD5(tfPass.text!)!
+
+            let user = tfUser.text!
+            let pass = MD5(tfPass.text!)!
             
             RESTLOGIN.loadLogin(user: user, pass: pass)
-            
-            //RESTLOGIN.loadLogin(urlLogin: urlLogin)
             
             activityIndicator.stopAnimating()
             
@@ -99,25 +89,7 @@ class ViewController: UIViewController {
             }
         }).resume()
     }
-    
-    
-    func downloadJsonWithTask() {
-        
-        let url = NSURL(string: urlString)
-        
-        var downloadTask = URLRequest(url: (url as URL?)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 20)
-        
-        downloadTask.httpMethod = "GET"
-        
-        URLSession.shared.dataTask(with: downloadTask, completionHandler: {(data, response, error) -> Void in
-            
-            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-            
-            print(jsonData)
-            
-        }).resume()
-    }
-    
+
     
     func MD5(_ string: String) -> String? {
         let length = Int(CC_MD5_DIGEST_LENGTH)

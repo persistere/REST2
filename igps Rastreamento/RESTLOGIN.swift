@@ -25,11 +25,7 @@ class RESTLOGIN {
         
         let basePath = "http://mobile.igps.com.br/acesso_app.php?user=\(user)&pass=\(pass)&ip=10.20.20.20&push=22211122&pai=aWc=&s_o=2&v_s_o=A.12_6.35&v_app=1.3&lat=-23.456&lng=-46.456&valida_1=1"
         
-        
-        //let basePath = urlLogin
-        
         guard let url = URL(string: basePath) else {return}
-        
         
         let dataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
             if error == nil {
@@ -38,6 +34,7 @@ class RESTLOGIN {
                 if response.statusCode == 200 {
                     
                     guard let data = data else {return}
+                    
                     do {
                         let users = try JSONDecoder().decode(Login.self, from: data)
                         
@@ -45,7 +42,8 @@ class RESTLOGIN {
                                 let pai = users.pai
                                 let userId = users.user_id
                                 
-                                print(pai, userId)
+                                print("-------------------------------->\(pai, userId)")
+                                
                                 
                                 //return RESTCAR.loadCars(pai: pai, user_id: userId)
                                 

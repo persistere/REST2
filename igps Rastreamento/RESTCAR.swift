@@ -24,34 +24,33 @@ class RESTCAR {
     private static let session = URLSession(configuration: configuration)
     
     class func loadCars(pai: String, user_id: String) {
-        guard let url = URL(string: basePath) else {return}
         
-        let dataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
-            if error == nil {
-                guard let response = response as? HTTPURLResponse else {return}
+        let urlString = "http://mobile.igps.com.br/app_1/call_app_1.php?inicial=1&user_id=4344&usuario=jbpribeiro&user=jbpribeiro&senha=dd9e2080ceebd0ac714c47d0f8a6c934&pass=66858572417537341635b4ed95534259&pai=aWc%3D"
+        
+        let url = NSURL(string: urlString)
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                 
-                if response.statusCode == 200 {
-                    
-                    guard let data = data else {return}
-                    do {
-                        let cars = try JSONDecoder().decode([Car].self, from: data)
-                        
-                        for car in cars {
-                            print(car.ano_m, car.cor )
+                
+                if let actorArray = jsonObj!.value(forKey: "veiculos") as? NSArray {
+                    for veiculo in actorArray {
+                        if let i = veiculo as? NSDictionary {
+                            if let ano_m = i.value(forKey: "ano_m") {
+                                
+                                print(ano_m)
+                            }
+                            
+                            
                         }
-                        
-                    } catch {
-                        print(error.localizedDescription)
                     }
-                    
-                } else {
-                    print("Algum Status Invalido")
                 }
                 
-            } else {
-                print(error!)
+                //                OperationQueue.main.addOperation({
+                //                    self.tableView.reloadData()
+                //                })
             }
-        }
-        dataTask.resume()
+        }).resume()
+        
     }
 }
