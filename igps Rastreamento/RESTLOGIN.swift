@@ -42,8 +42,8 @@ class RESTLOGIN {
                                 let pai = users.pai
                                 let userId = users.user_id
                                 
-                                print("-------------------------------->\(pai, userId)")
-                                return RESTCAR.loadCars(pai: pai, user_id: userId)
+                                print("-------------------------------->\(user, pass, pai, userId)")
+                                return RESTCAR.loadCars(user: user, pass: pass, pai: pai, user_id: userId)
                                 
                             } else {
                                 print("erro de login")
