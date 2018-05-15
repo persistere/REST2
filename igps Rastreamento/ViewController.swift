@@ -35,6 +35,8 @@ class ViewController: UIViewController {
             
             RESTLOGIN.loadLogin(user: user, pass: pass)
             
+            navigationController?.popViewController(animated: true)
+            
             activityIndicator.stopAnimating()
             
             //btEnviar.isEnabled = false
@@ -56,39 +58,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-   
-    
-    
-    func downloadJsonWithURL() {
-        let urlString = "http://mobile.igps.com.br/app_1/call_app_1.php?inicial=1&user_id=4344&usuario=jbpribeiro&user=jbpribeiro&senha=dd9e2080ceebd0ac714c47d0f8a6c934&pass=66858572417537341635b4ed95534259&pai=aWc%3D"
-        
-        let url = NSURL(string: urlString)
-        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
-            
-            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                
-                
-                if let actorArray = jsonObj!.value(forKey: "veiculos") as? NSArray {
-                    for veiculo in actorArray {
-                        if let i = veiculo as? NSDictionary {
-                            if let ano_m = i.value(forKey: "ano_m") {
-                                
-                                print(ano_m)
-                            }
-                            
-
-                        }
-                    }
-                }
-                
-//                OperationQueue.main.addOperation({
-//                    self.tableView.reloadData()
-//                })
-            }
-        }).resume()
-    }
 
     
     func MD5(_ string: String) -> String? {

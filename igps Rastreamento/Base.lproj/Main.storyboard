@@ -123,6 +123,7 @@
                         <outlet property="btEnviar" destination="rTP-mE-f1S" id="YN4-QO-tRZ"/>
                         <outlet property="tfPass" destination="QDg-6q-4Hn" id="quf-2w-bHq"/>
                         <outlet property="tfUser" destination="KnX-IX-aus" id="oMU-yz-4n1"/>
+                        <segue destination="bhW-UX-PsY" kind="show" identifier="login" id="zxd-4x-4m0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4s0-BI-KN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -267,16 +268,16 @@
         <!--Navigation Controller-->
         <scene sceneID="73J-52-tav">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9L-dd-ymY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="bhW-UX-PsY" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0tP-qb-BkO">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
                         <segue destination="wj4-Bm-4Y6" kind="relationship" relationship="rootViewController" id="DKy-lJ-WHp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r9L-dd-ymY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="799" y="197"/>
         </scene>

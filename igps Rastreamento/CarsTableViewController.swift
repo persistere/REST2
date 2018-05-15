@@ -9,7 +9,10 @@
 import UIKit
 
 class CarsTableViewController: UITableViewController {
-
+    
+    var cars: [Car] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +20,9 @@ class CarsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //RESTCAR.loadCars()
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +39,7 @@ class CarsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
     }
 
     /*
