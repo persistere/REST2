@@ -8,10 +8,11 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    var data = [TabelaLogin]()
     
     @IBOutlet var tfUser: UITextField!
     @IBOutlet var tfPass: UITextField!
@@ -35,21 +36,20 @@ class ViewController: UIViewController {
             
             RESTLOGIN.loadLogin(user: user, pass: pass)
             
-            navigationController?.popViewController(animated: true)
-            
             activityIndicator.stopAnimating()
             
-            //btEnviar.isEnabled = false
-            //btEnviar.alpha = 0.5
+            navigationController?.popViewController(animated: true)
             
-            //alerta(titulo: "Erro", erro: "Aconteceu um erro inesperado, favor tente mais tarde")
-            //activityIndicator.stopAnimating()
+            lista()
+            
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //downloadJsonWithURL()
+        lista()
         
     }
 
@@ -58,7 +58,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func lista() {
+        
+        do {
+            data = try context.fetch(TabelaLogin.fetchRequest())
+            
+            for i in data {
+                
+                if (i.pai == "aWc=") {
+                    print("tableview")
+                } else {
+                    print("fazer Login")
+                }
+                
+                //print("Nome: \(i.pai)\n Senha:\( i.pass)" )
+            }
+        } catch {
+            print("error")
+        }
+    }
+    
     
     func MD5(_ string: String) -> String? {
         let length = Int(CC_MD5_DIGEST_LENGTH)

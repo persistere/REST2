@@ -32,17 +32,10 @@ class RESTCAR {
         return config
     }()
     
-    
-    
+
     private static let session = URLSession(configuration: configuration)
     
-    
     func loadCars() {
-        
-        
-        
-        
-        
         
         let urlString = "http://mobile.igps.com.br/app_1/call_app_1.php?inicial=1&user_id=\(user_id)&usuario=\(user)&user=\(user)&senha=\(pass)&pass=\(pass)&pai=\(pai)"
         
