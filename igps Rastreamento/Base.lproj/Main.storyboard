@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y9T-1c-m1N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,7 +47,7 @@
                                 <state key="normal" title="FAZER LOGIN"/>
                                 <connections>
                                     <action selector="btFazerLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZG-Vu-qD6"/>
-                                    <segue destination="5Dv-g5-KGX" kind="show" id="aLj-Vq-gf2"/>
+                                    <segue destination="5Dv-g5-KGX" kind="show" identifier="loginSegue" id="aLj-Vq-gf2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,10 +62,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="UGb-ZP-ouc" kind="show" identifier="listaSegue" id="Dvc-Zq-GlO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-373" y="197"/>
+            <point key="canvasLocation" x="-614" y="43"/>
         </scene>
         <!--Login-->
         <scene sceneID="k7H-LY-IUl">
@@ -104,6 +107,7 @@
                                 <state key="normal" title="ENVIAR"/>
                                 <connections>
                                     <action selector="btEnviar:" destination="5Dv-g5-KGX" eventType="touchUpInside" id="ZCk-ol-7lI"/>
+                                    <segue destination="UGb-ZP-ouc" kind="show" identifier="sucessoSegue" id="6CU-E0-K3c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,7 +132,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4s0-BI-KN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="235" y="197"/>
+            <point key="canvasLocation" x="182" y="-458"/>
+        </scene>
+        <!--Configurações-->
+        <scene sceneID="lux-eN-BRi">
+            <objects>
+                <viewController id="uP3-kW-80N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iMn-SZ-AJg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VGI-2H-haI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Configurações" image="services" id="mM5-hD-gVi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQj-OS-Kox" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2289" y="399"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0Ns-Dc-FgO">
+            <objects>
+                <tabBarController id="UGb-ZP-ouc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JNN-Yf-CMZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="y9T-1c-m1N" kind="relationship" relationship="viewControllers" id="QDo-kA-qah"/>
+                        <segue destination="uP3-kW-80N" kind="relationship" relationship="viewControllers" id="XaW-dD-YLs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haX-eF-7ym" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="43"/>
         </scene>
         <!--Cars Table View Controller-->
         <scene sceneID="fqc-DO-DMa">
@@ -259,7 +297,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="endereco" destination="oDh-he-5x2" id="hLW-Wd-hl0"/>
-                                    <outlet property="placa" destination="tl5-tY-CYc" id="z2f-u0-jD2"/>
+                                    <outlet property="placa" destination="YoL-dx-Kaa" id="sIh-YQ-q22"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -268,13 +306,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8u-rh-Nsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="197"/>
+            <point key="canvasLocation" x="3057" y="-302"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Veículos-->
         <scene sceneID="A2n-JG-WQV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y9T-1c-m1N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Veículos" image="car" id="Pma-bZ-1rc"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9E1-Yv-HFQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hAY-bl-iYe">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -286,10 +326,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evL-qs-ASl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965.60000000000002" y="196.55172413793105"/>
+            <point key="canvasLocation" x="2289" y="-301"/>
         </scene>
     </scenes>
     <resources>
+        <image name="car" width="30" height="30"/>
         <image name="imageView:3vo-K3-Lar:image" width="30" height="30">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGVVZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEgcI
@@ -858,5 +899,9 @@ OSo8KkkqTipWKlkqXipmKmkqeyp+KoMAAAAAAAACAQAAAAAAAABZAAAAAAAAAAAAAAAAAAAqhQ
 </mutableData>
         </image>
         <image name="logo" width="618" height="627"/>
+        <image name="services" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6CU-E0-K3c"/>
+    </inferredMetricsTieBreakers>
 </document>

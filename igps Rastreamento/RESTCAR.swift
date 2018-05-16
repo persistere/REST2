@@ -63,8 +63,6 @@ class RESTCAR {
         let urlString = "http://mobile.igps.com.br/app_1/call_app_1.php?inicial=1&user_id=\(user_id)&usuario=\(user)&user=\(user)&senha=\(pass)&pass=\(pass)&pai=\(pai)"
         
         
-        print(urlString)
-        
         guard let url = URL(string: urlString) else {return}
         
         let dataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
@@ -77,7 +75,6 @@ class RESTCAR {
                     do {
                         let cars = try JSONDecoder().decode(Respostajson.self, from: data)
                         
-                        //print(cars.veiculos)
                         onComplete(cars.veiculos)
                         
                     } catch {
@@ -93,40 +90,6 @@ class RESTCAR {
             }
         }
         dataTask.resume()
-        
-        
-        
-        
-        /*
-         
-         let url = NSURL(string: urlString)
-         
-        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
-            
-
-            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                
-                if let veiculos = jsonObj!.value(forKey: "veiculos") as? NSArray {
-                    
-                    onComplete(veiculos as! [Car])
-                    
-//                    for veiculo in veiculos {
-//                        if let i = veiculo as? NSDictionary {
-//                           // if let ano_m = i.value(forKey: "ano_m") {
-//                                print(i)
-//
-//                            //}
-//                        }
-//                    }
-                }
-                
-                OperationQueue.main.addOperation({
-                    //self.tableView.reloadData()
-                })
-            }
-        }).resume()
-        
-        */
         
     }
     

@@ -26,6 +26,4 @@ class Car: Codable {
     var veiculo_icone: String?
     var atualizar_menu_app: String?
     var cor_txt_data: String?
-    
-
 }

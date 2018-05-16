@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
+    //Para salvar no core data
     var data = [TabelaLogin]()
     
     @IBOutlet var tfUser: UITextField!
@@ -44,10 +45,7 @@ class ViewController: UIViewController {
             
             activityIndicator.stopAnimating()
             
-            navigationController?.popViewController(animated: true)
-            
-            lista()
-            
+            performSegue(withIdentifier: "sucessoSegue", sender: nil)
         }
     }
     
@@ -72,13 +70,15 @@ class ViewController: UIViewController {
             for i in data {
                 
                 if (i.pai == "aWc=") {
-                    performSegue(withIdentifier: "lista", sender: self)
+                    performSegue(withIdentifier: "listaSegue", sender: nil)
                     print("tableview")
                 } else {
+                    performSegue(withIdentifier: "loginSegue", sender: nil)
                     print("fazer Login")
+                    
                 }
                 
-                //print("Nome: \(i.pai)\n Senha:\( i.pass)" )
+                //print("Nome: \(i.pai)\n Senha:\( i.pass)" )  
             }
         } catch {
             print("error")

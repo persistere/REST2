@@ -11,7 +11,7 @@ import UIKit
 class CarsTableViewCell: UITableViewCell {
     
     
-    @IBOutlet weak var placa: NSLayoutConstraint!
+    @IBOutlet weak var placa: UILabel!
     @IBOutlet weak var endereco: UILabel!
     
     

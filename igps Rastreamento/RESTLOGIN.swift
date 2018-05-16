@@ -29,10 +29,6 @@ class RESTLOGIN {
         
         var tabelaLogin: TabelaLogin!
         
-//        var context: NSManagedObjectContext {
-//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//            return appDelegate.persistentContainer.viewContext
-//        }
         
         let basePath = "http://mobile.igps.com.br/acesso_app.php?user=\(user)&pass=\(pass)&ip=10.20.20.20&push=22211122&pai=aWc=&s_o=2&v_s_o=A.12_6.35&v_app=1.3&lat=-23.456&lng=-46.456&valida_1=1"
         

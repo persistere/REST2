@@ -10,7 +10,6 @@ import UIKit
 
 class CarsTableViewController: UITableViewController {
     
-    
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     var cars: [Veiculos] = []
@@ -28,7 +27,6 @@ class CarsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         })
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,10 +58,10 @@ class CarsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarsTableViewCell
         
-        //let placa = self.cars[indexPath.row].placa
+        let placa = self.cars[indexPath.row].placa
         let serie = self.cars[indexPath.row].serie
         
-        //cell.placa? = placa
+        cell.placa?.text = placa
         cell.endereco?.text = serie
         
         return cell
