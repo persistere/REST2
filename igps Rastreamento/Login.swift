@@ -9,8 +9,8 @@
 import Foundation
 
 class Login : Decodable {
-    var user_id: String = ""
-    var pai: String = ""
-    var user_email: String = ""
-    var user_sms: String = ""
+    var user_id: String?
+    var pai: String?
+    var user_email: String?
+    var user_sms: String?
 }

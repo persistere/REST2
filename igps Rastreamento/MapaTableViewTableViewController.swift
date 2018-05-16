@@ -1,32 +1,23 @@
 //
-//  CarsTableViewController.swift
+//  MapaTableViewTableViewController.swift
 //  igpsRastreamento
 //
-//  Created by Jose Otavio on 10/05/2018.
+//  Created by Jose Otavio on 16/05/2018.
 //  Copyright © 2018 iGps Sistemas. All rights reserved.
 //
 
 import UIKit
 
-class CarsTableViewController: UITableViewController {
-    
-    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    
-    var cars: [Veiculos] = []
-    
+class MapaTableViewTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        RESTCAR.loadCars(onComplete: { (cars) in
-            self.cars = cars
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        })
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,42 +26,26 @@ class CarsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(self.cars.count == 0) {
-            activityIndicator.center = self.view.center
-            activityIndicator.hidesWhenStopped = true
-            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-            view.addSubview(activityIndicator)
-            activityIndicator.startAnimating()
-            
-        } else {
-            activityIndicator.stopAnimating()
-        }
-        
-          print(self.cars.count)
-        
-        return self.cars.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarsTableViewCell
-        
-        let placa = self.cars[indexPath.row].placa
-        let serie = self.cars[indexPath.row].serie
-        
-        cell.placa?.text = placa
-        cell.endereco?.text = serie
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

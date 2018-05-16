@@ -45,7 +45,8 @@ class ViewController: UIViewController {
             
             activityIndicator.stopAnimating()
             
-            performSegue(withIdentifier: "sucessoSegue", sender: nil)
+            //performSegue(withIdentifier: "sucessoSegue", sender: nil)
+            
         }
     }
     
