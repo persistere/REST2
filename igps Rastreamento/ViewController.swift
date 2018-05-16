@@ -18,6 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet var tfPass: UITextField!
     @IBOutlet var btEnviar: UIButton!
     
+    @IBAction func btFazerLogin(_ sender: UIButton) {
+        lista()
+    }
+    
+    
+    
     @IBAction func btEnviar(_ sender: UIButton) {
         
         activityIndicator.center = self.view.center
@@ -49,7 +55,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //downloadJsonWithURL()
-        lista()
+        
         
     }
 
@@ -66,6 +72,7 @@ class ViewController: UIViewController {
             for i in data {
                 
                 if (i.pai == "aWc=") {
+                    performSegue(withIdentifier: "lista", sender: self)
                     print("tableview")
                 } else {
                     print("fazer Login")

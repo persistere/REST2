@@ -18,6 +18,7 @@
 		2566CB4920A26A07000FE434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2566CB4820A26A06000FE434 /* Assets.xcassets */; };
 		25692B4E20A9DAF7003FA93A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25692B4D20A9DAF7003FA93A /* Login.swift */; };
 		25692B5020A9DB06003FA93A /* RESTLOGIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25692B4F20A9DB06003FA93A /* RESTLOGIN.swift */; };
+		256A6B1220AB9B73009E27DE /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A6B1120AB9B73009E27DE /* CarsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		25692B4D20A9DAF7003FA93A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		25692B4F20A9DB06003FA93A /* RESTLOGIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTLOGIN.swift; sourceTree = "<group>"; };
 		25692B5220A9EF55003FA93A /* Objc-md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-md5.h"; sourceTree = "<group>"; };
+		256A6B1120AB9B73009E27DE /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				252AC6F320A4F24900E38061 /* RESTCAR.swift */,
 				2566CB4820A26A06000FE434 /* Assets.xcassets */,
 				2566CB351FF9B6C3000FE434 /* Main.storyboard */,
+				256A6B1120AB9B73009E27DE /* CarsTableViewCell.swift */,
 				2566CB3D1FF9B6C5000FE434 /* LaunchScreen.storyboard */,
 				2566CB401FF9B6C6000FE434 /* Info.plist */,
 				2566CB381FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodeld */,
@@ -160,6 +163,7 @@
 				2566CB341FF9B6C3000FE434 /* ViewController.swift in Sources */,
 				2566CB3A1FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodeld in Sources */,
 				252AC6F420A4F24900E38061 /* RESTCAR.swift in Sources */,
+				256A6B1220AB9B73009E27DE /* CarsTableViewCell.swift in Sources */,
 				252AC6F220A4EE7700E38061 /* Car.swift in Sources */,
 				252AC6F620A4FADD00E38061 /* CarsTableViewController.swift in Sources */,
 				2566CB321FF9B6C3000FE434 /* AppDelegate.swift in Sources */,

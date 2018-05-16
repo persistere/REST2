@@ -10,18 +10,24 @@ import UIKit
 
 class CarsTableViewController: UITableViewController {
     
-    var cars: [Car] = []
     
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    var cars: [Veiculos] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        RESTCAR.loadCars(onComplete: { (cars) in
+            self.cars = cars
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
         
     }
 
@@ -31,26 +37,38 @@ class CarsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 5
+        if(self.cars.count == 0) {
+            activityIndicator.center = self.view.center
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            view.addSubview(activityIndicator)
+            activityIndicator.startAnimating()
+            
+        } else {
+            activityIndicator.stopAnimating()
+        }
+        
+          print(self.cars.count)
+        
+        return self.cars.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarsTableViewCell
+        
+        //let placa = self.cars[indexPath.row].placa
+        let serie = self.cars[indexPath.row].serie
+        
+        //cell.placa? = placa
+        cell.endereco?.text = serie
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
