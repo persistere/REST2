@@ -33,6 +33,8 @@ class CarsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
     // MARK: - Table view data source
     
@@ -59,12 +61,37 @@ class CarsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarsTableViewCell
         
         let placa = self.cars[indexPath.row].placa
-        let serie = self.cars[indexPath.row].serie
+        let endereco = self.cars[indexPath.row].endereco
+        let gpsDataHora = self.cars[indexPath.row].dh_hps_tratado
+        let latitude = self.cars[indexPath.row].latitude
+        let longitude = self.cars[indexPath.row].longitude
+        
+//        let ignicao = self.cars[indexPath.row].chave
+//        let dentroOuFora = self.cars[indexPath.row].atualizado
+//        let marca = self.cars[indexPath.row].ano_m
+
         
         cell.placa?.text = placa
-        cell.endereco?.text = serie
+        cell.endereco?.text = endereco
+        cell.gpsDataHora?.text = gpsDataHora
+
+//        cell.marca?.text = ignicao
+//        cell.bateria?.image = ignicao
+//        cell.ignicao?.image = ignicao
+//        cell.dentroOuFora?.image = ignicao
         
         return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
+        performSegue(withIdentifier: "showDatails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MapaViewController{
+            destination.veiculos = cars[(tableView.indexPathForSelectedRow?.row)!]
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
