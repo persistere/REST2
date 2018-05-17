@@ -11,25 +11,19 @@ import MapKit
 import Foundation
 
 class MapaViewController: UIViewController {
-
+    
     @IBOutlet weak var mapView: MKMapView!
     
     var veiculos:Veiculos?
     
-    var latitude = 23.5475000
-    var longitude = -46.6361100
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if let latitude = veiculos?.latitude {
-//           let latitude = Double(latitude)
-//        }
-//
-//        if let longitude = veiculos?.latitude {
-//           let longitude = Double(longitude)
-//        }
-//
+        
+        let latitude = Double((veiculos?.latitude)!)!
+        let longitude = Double((veiculos?.longitude)!)!
+        
         let location = CLLocationCoordinate2DMake(latitude, longitude)
         
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(location, 1500, 1500), animated: true)
@@ -43,7 +37,7 @@ class MapaViewController: UIViewController {
         camera.pitch = 80
         camera.altitude = 100
         mapView.setCamera(camera, animated: true)
-    
+        
     }
 }
 
