@@ -13,4 +13,5 @@ class Login : Decodable {
     var pai: String?
     var user_email: String?
     var user_sms: String?
+    var logins: [Login]?
 }

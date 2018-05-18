@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 struct Respostajson: Decodable {
     let resp: Int
@@ -43,6 +44,8 @@ struct Veiculos: Decodable{
 
 
 class RESTCAR {
+    
+    
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
         config.allowsCellularAccess = false
@@ -62,14 +65,19 @@ class RESTCAR {
         var pai: String = ""
         var data = [TabelaLogin]()
         
+        var context: NSManagedObjectContext {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            return appDelegate.persistentContainer.viewContext
+        }
+
         do {
             data = try context.fetch(TabelaLogin.fetchRequest())
             
             for i in data {
-                user_id = i.userId!
-                user = i.user!
-                pass = i.pass!
-                pai = i.pai!
+                user_id = (i.userId)!
+                user = (i.user)!
+                pass = (i.pass)!
+                pai = (i.pai)!
             }
         } catch {
             print("error")

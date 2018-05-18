@@ -6,82 +6,110 @@
 //  Copyright © 2017 iGps Sistemas. All rights reserved.
 //
 
+import Foundation
 import UIKit
-
+import CoreData
 
 class ViewController: UIViewController {
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
-    //Para salvar no core data
-    var data = [TabelaLogin]()
+    var tabelaLogin: TabelaLogin!
+    
+    var logins = [TabelaLogin]()
     
     @IBOutlet var tfUser: UITextField!
     @IBOutlet var tfPass: UITextField!
     @IBOutlet var btEnviar: UIButton!
     
-    @IBAction func btFazerLogin(_ sender: UIButton) {
-        lista()
-    }
-    
-    
-    
     @IBAction func btEnviar(_ sender: UIButton) {
-        
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
         
         if tfUser.text == "" || tfPass.text == "" {
             alerta(titulo: "Atenção", erro: "Por favor preencha o usuário e senha")
-            activityIndicator.stopAnimating()
         } else {
-
+            
             let user = tfUser.text!
             let pass = MD5(tfPass.text!)!
+
+            let jsonURL = "http://mobile.igps.com.br/acesso_app.php?user=\(user)&pass=\(pass)&ip=10.20.20.20&push=22211122&pai=aWc=&s_o=2&v_s_o=A.12_6.35&v_app=1.3&lat=-23.456&lng=-46.456&valida_1=1"
             
-            RESTLOGIN.loadLogin(user: user, pass: pass)
+            let url = URL(string: jsonURL)
             
-            activityIndicator.stopAnimating()
-            
-            //performSegue(withIdentifier: "sucessoSegue", sender: nil)
-            
+            URLSession.shared.dataTask(with: url!){( data, response, error ) in
+                do {
+                    let users = try JSONDecoder().decode(Login.self, from: data!)
+                    
+//                    print("---------------------------v")
+//                    print(users.pai)
+//                    print(users.user_id)
+                    
+                    if( users.pai == nil && users.user_id == nil ) {
+                        self.alertaErro()
+                    } else {
+                        
+                        if self.tabelaLogin == nil {
+                            self.tabelaLogin = TabelaLogin(context: self.context)
+                        }
+                        
+                        let pai = users.pai
+                        let userId = users.user_id
+                        
+                        self.tabelaLogin.pai = pai
+                        self.tabelaLogin.pass = pass
+                        self.tabelaLogin.userId = userId
+                        self.tabelaLogin.user = user
+                        
+                        do {
+                            try self.context.save()
+                        } catch {
+                            print("Nao salvo")
+                        }
+                        
+                        DispatchQueue.main.async {
+                            [unowned self] in
+                            self.performSegue(withIdentifier: "sucessoSegue", sender: self)
+                        }
+                    }
+                    
+                } catch {
+                    print("Error")
+                }
+            }.resume()
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //downloadJsonWithURL()
-        
-        
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        lista()
+    }
+    
+    func alertaErro(){
+        print("erro")
     }
     
     func lista() {
+        var lista = 0
         
         do {
-            data = try context.fetch(TabelaLogin.fetchRequest())
+            logins = try context.fetch(TabelaLogin.fetchRequest())
             
-            for i in data {
+            for i in logins {
                 
                 if (i.pai == "aWc=") {
-                    performSegue(withIdentifier: "listaSegue", sender: nil)
-                    print("tableview")
-                } else {
-                    performSegue(withIdentifier: "loginSegue", sender: nil)
-                    print("fazer Login")
-                    
+                    lista = 1
                 }
-                
-                //print("Nome: \(i.pai)\n Senha:\( i.pass)" )  
+                print("tableview")
+                print("Nome: \(i.pai)\n Senha:\( i.pass)" )
             }
+            
+            if lista >= 1 {
+                DispatchQueue.main.async {
+                    [unowned self] in
+                    self.performSegue(withIdentifier: "sucessoSegue", sender: self)
+                }
+            }
+            
         } catch {
             print("error")
         }
@@ -111,8 +139,6 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-
-
 }
 
 

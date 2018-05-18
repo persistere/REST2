@@ -12,6 +12,7 @@
 		252AC6F620A4FADD00E38061 /* CarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252AC6F520A4FADD00E38061 /* CarsTableViewController.swift */; };
 		2539237F20ADD9BE00EC6BF6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2539237E20ADD9BE00EC6BF6 /* MapKit.framework */; };
 		2539238420ADDE0E00EC6BF6 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2539238320ADDE0E00EC6BF6 /* Pin.swift */; };
+		2539238820AF48A900EC6BF6 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2539238720AF48A900EC6BF6 /* ViewController+CoreData.swift */; };
 		2566CB321FF9B6C3000FE434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566CB311FF9B6C3000FE434 /* AppDelegate.swift */; };
 		2566CB341FF9B6C3000FE434 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566CB331FF9B6C3000FE434 /* ViewController.swift */; };
 		2566CB371FF9B6C3000FE434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2566CB351FF9B6C3000FE434 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		2539237E20ADD9BE00EC6BF6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2539238220ADD9FC00EC6BF6 /* igpsRastreamento.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = igpsRastreamento.entitlements; sourceTree = "<group>"; };
 		2539238320ADDE0E00EC6BF6 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		2539238720AF48A900EC6BF6 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 		2566CB2E1FF9B6C3000FE434 /* igpsRastreamento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igpsRastreamento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2566CB311FF9B6C3000FE434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2566CB331FF9B6C3000FE434 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				252AC6F120A4EE7700E38061 /* Car.swift */,
 				25692B4D20A9DAF7003FA93A /* Login.swift */,
 				25692B4F20A9DB06003FA93A /* RESTLOGIN.swift */,
+				2539238720AF48A900EC6BF6 /* ViewController+CoreData.swift */,
 				252AC6F320A4F24900E38061 /* RESTCAR.swift */,
 				2566CB4820A26A06000FE434 /* Assets.xcassets */,
 				2566CB351FF9B6C3000FE434 /* Main.storyboard */,
@@ -191,6 +194,7 @@
 				25692B5020A9DB06003FA93A /* RESTLOGIN.swift in Sources */,
 				2566CB341FF9B6C3000FE434 /* ViewController.swift in Sources */,
 				2566CB3A1FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodeld in Sources */,
+				2539238820AF48A900EC6BF6 /* ViewController+CoreData.swift in Sources */,
 				252AC6F420A4F24900E38061 /* RESTCAR.swift in Sources */,
 				256A6B1220AB9B73009E27DE /* CarsTableViewCell.swift in Sources */,
 				252AC6F220A4EE7700E38061 /* Car.swift in Sources */,
