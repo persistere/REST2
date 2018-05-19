@@ -14,8 +14,14 @@ class CarsTableViewController: UITableViewController {
     
     var cars: [Veiculos] = []
     
+    var refrasher: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        refrasher = UIRefreshControl()
+//        refrasher.attributedTitle = NSAttributedString(string: "reload")
+        refrasher.addTarget(self, action: #selector(CarsTableViewController.viewWillAppear(_:)), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refrasher)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,6 +30,7 @@ class CarsTableViewController: UITableViewController {
         RESTCAR.loadCars(onComplete: { (cars) in
             self.cars = cars
             DispatchQueue.main.async {
+                self.refrasher.endRefreshing()
                 self.tableView.reloadData()
             }
         })
