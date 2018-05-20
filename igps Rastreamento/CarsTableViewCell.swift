@@ -18,6 +18,9 @@ class CarsTableViewCell: UITableViewCell {
     @IBOutlet weak var gpsDataHora: UILabel!
     @IBOutlet weak var modelo: UILabel!
     @IBOutlet weak var bateria: UIImageView!
+    @IBOutlet weak var frota: UILabel!
+    @IBOutlet weak var cor: UILabel!
+    @IBOutlet weak var ano: UILabel!
     
     
     override func awakeFromNib() {

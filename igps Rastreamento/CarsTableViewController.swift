@@ -67,25 +67,15 @@ class CarsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarsTableViewCell
         
-        let placa = self.cars[indexPath.row].placa
-        let endereco = self.cars[indexPath.row].endereco
-        let gpsDataHora = self.cars[indexPath.row].dh_hps_tratado
-        let latitude = self.cars[indexPath.row].latitude
-        let longitude = self.cars[indexPath.row].longitude
+        cell.placa?.text = self.cars[indexPath.row].placa
+        cell.endereco?.text = self.cars[indexPath.row].endereco
+        cell.gpsDataHora?.text = self.cars[indexPath.row].dh_hps_tratado
+        cell.frota?.text = self.cars[indexPath.row].frota
+        cell.ano?.text = self.cars[indexPath.row].ano_m
+        cell.modelo?.text = self.cars[indexPath.row].modelo
+        cell.cor?.text = self.cars[indexPath.row].cor
         
-//        let ignicao = self.cars[indexPath.row].chave
-//        let dentroOuFora = self.cars[indexPath.row].atualizado
-//        let marca = self.cars[indexPath.row].ano_m
-
-        
-        cell.placa?.text = placa
-        cell.endereco?.text = endereco
-        cell.gpsDataHora?.text = gpsDataHora
-
-//        cell.marca?.text = ignicao
-//        cell.bateria?.image = ignicao
-//        cell.ignicao?.image = ignicao
-//        cell.dentroOuFora?.image = ignicao
+        cell.ignicao.downloadedFrom(url: URL(string: self.cars[indexPath.row].chave!)!)
         
         return cell
         
@@ -151,4 +141,25 @@ class CarsTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension UIImageView {
+    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                self.image = image
+            }
+            }.resume()
+    }
+    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloadedFrom(url: url, contentMode: mode)
+    }
 }

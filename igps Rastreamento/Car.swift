@@ -27,3 +27,5 @@ class Car: Codable {
     var atualizar_menu_app: String?
     var cor_txt_data: String?
 }
+
+
