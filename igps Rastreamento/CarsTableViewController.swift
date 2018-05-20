@@ -16,6 +16,8 @@ class CarsTableViewController: UITableViewController {
     
     var refrasher: UIRefreshControl!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         refrasher = UIRefreshControl()
@@ -75,7 +77,17 @@ class CarsTableViewController: UITableViewController {
         cell.modelo?.text = self.cars[indexPath.row].modelo
         cell.cor?.text = self.cars[indexPath.row].cor
         
-        cell.ignicao.downloadedFrom(url: URL(string: self.cars[indexPath.row].chave!)!)
+        if self.cars[indexPath.row].chave != nil {
+            cell.ignicao.downloadedFrom(url: URL(string: self.cars[indexPath.row].chave!)!)
+        }
+        
+        if self.cars[indexPath.row].atualizado != nil {
+            cell.dentroOuFora.downloadedFrom(url: URL(string: self.cars[indexPath.row].atualizado!)!)
+        }
+        
+        if self.cars[indexPath.row].bateria != nil {
+            cell.bateria.downloadedFrom(url: URL(string: self.cars[indexPath.row].bateria!)!)
+        }
         
         return cell
         
