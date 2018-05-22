@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2527C85F20B3929700ABB949 /* AlterarSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2527C85E20B3929700ABB949 /* AlterarSenhaViewController.swift */; };
 		252AC6F220A4EE7700E38061 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252AC6F120A4EE7700E38061 /* Car.swift */; };
 		252AC6F420A4F24900E38061 /* RESTCAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252AC6F320A4F24900E38061 /* RESTCAR.swift */; };
 		252AC6F620A4FADD00E38061 /* CarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252AC6F520A4FADD00E38061 /* CarsTableViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2527C85E20B3929700ABB949 /* AlterarSenhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterarSenhaViewController.swift; sourceTree = "<group>"; };
 		252AC6F120A4EE7700E38061 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		252AC6F320A4F24900E38061 /* RESTCAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCAR.swift; sourceTree = "<group>"; };
 		252AC6F520A4FADD00E38061 /* CarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		2566CB251FF9B6C3000FE434 = {
 			isa = PBXGroup;
 			children = (
+				2527C85E20B3929700ABB949 /* AlterarSenhaViewController.swift */,
 				2539238220ADD9FC00EC6BF6 /* igpsRastreamento.entitlements */,
 				25692B5220A9EF55003FA93A /* Objc-md5.h */,
 				2566CB301FF9B6C3000FE434 /* igps Rastreamento */,
@@ -92,6 +95,8 @@
 		2566CB301FF9B6C3000FE434 /* igps Rastreamento */ = {
 			isa = PBXGroup;
 			children = (
+				2566CB351FF9B6C3000FE434 /* Main.storyboard */,
+				2566CB3D1FF9B6C5000FE434 /* LaunchScreen.storyboard */,
 				25DB03E520AC9F3E0045C4E2 /* MapaViewController.swift */,
 				2539238320ADDE0E00EC6BF6 /* Pin.swift */,
 				2566CB311FF9B6C3000FE434 /* AppDelegate.swift */,
@@ -104,9 +109,7 @@
 				252AC6F320A4F24900E38061 /* RESTCAR.swift */,
 				2539238720AF48A900EC6BF6 /* ViewController+CoreData.swift */,
 				2566CB4820A26A06000FE434 /* Assets.xcassets */,
-				2566CB351FF9B6C3000FE434 /* Main.storyboard */,
 				25ED6A1820B22755009CD059 /* ConfiguracaoViewController.swift */,
-				2566CB3D1FF9B6C5000FE434 /* LaunchScreen.storyboard */,
 				2566CB401FF9B6C6000FE434 /* Info.plist */,
 				2566CB381FF9B6C3000FE434 /* igps_Rastreamento.xcdatamodeld */,
 			);
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2527C85F20B3929700ABB949 /* AlterarSenhaViewController.swift in Sources */,
 				25692B4E20A9DAF7003FA93A /* Login.swift in Sources */,
 				2539238420ADDE0E00EC6BF6 /* Pin.swift in Sources */,
 				25692B5020A9DB06003FA93A /* RESTLOGIN.swift in Sources */,
