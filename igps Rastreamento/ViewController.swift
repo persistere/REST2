@@ -31,7 +31,9 @@ class ViewController: UIViewController {
             let user = tfUser.text!
             let pass = MD5(tfPass.text!)!
 
-            let jsonURL = "http://mobile.igps.com.br/acesso_app.php?user=\(user)&pass=\(pass)&ip=10.20.20.20&push=22211122&pai=aWc=&s_o=2&v_s_o=A.12_6.35&v_app=1.3&lat=-23.456&lng=-46.456&valida_1=1"
+            let jsonURL = "http://mobile.igps.com.br/app_1/acesso_app.php?user=\(user)&pass=\(pass)&push=ios&key=eHg=&s_o=1&v_s_o=24&v_app=1.1.1&valida_0=1&lat=&lng="
+
+//            let jsonURL = "http://mobile.igps.com.br/acesso_app.php?user=\(user)&pass=\(pass)&ip=10.20.20.20&push=22211122&pai=aWc=&s_o=2&v_s_o=A.12_6.35&v_app=1.3&lat=-23.456&lng=-46.456&valida_1=1"
             
             let url = URL(string: jsonURL)
             
@@ -39,40 +41,25 @@ class ViewController: UIViewController {
                 do {
                     let users = try JSONDecoder().decode(Login.self, from: data!)
                     
-//                    print("---------------------------v")
-//                    print(users.pai)
-//                    print(users.user_id)
+                    print("1---------------------------")
+                    print(url)
+                    print(users.pai)
+                    print(users.resp)
                     
-                    if( users.pai == nil && users.user_id == nil ) {
-                        self.alertaErro()
+                    if( users.pai == "" || users.pai == nil || users.resp != 1 ) {
+                        self.deslogar()
                     } else {
                         
-                        if self.tabelaLogin == nil {
-                            self.tabelaLogin = TabelaLogin(context: self.context)
-                        }
-                        
                         let pai = users.pai
-                        let userId = users.user_id
                         
-                        self.tabelaLogin.pai = pai
-                        self.tabelaLogin.pass = pass
-                        self.tabelaLogin.userId = userId
-                        self.tabelaLogin.user = user
-                        
-                        do {
-                            try self.context.save()
-                        } catch {
-                            print("Nao salvo")
+                        if (pai != nil){
+                            self.gravaLogin(user: user, pass: pass, pai: ((pai)!) )
                         }
                         
-                        DispatchQueue.main.async {
-                            [unowned self] in
-                            self.performSegue(withIdentifier: "sucessoSegue", sender: self)
-                        }
                     }
                     
                 } catch {
-                    print("Error")
+                    print("Error pegar Pai")
                 }
             }.resume()
         }
@@ -82,6 +69,72 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         lista()
+    }
+    
+    func gravaLogin(user: String, pass: String, pai: String) {
+        let jsonURL = "http://mobile.igps.com.br/app_1/acesso_app.php?user=\(user)&pass=\(pass)&push=io5&pai=\(pai)&s_o=2&v_s_o=24&v_app=1.1.1&valida_1=1&lat=-23.456&lng=-46.456"
+        
+        let url = URL(string: jsonURL)
+        
+        print(url)
+        
+        URLSession.shared.dataTask(with: url!){( data, response, error ) in
+            do {
+                let users = try JSONDecoder().decode(Login.self, from: data!)
+                
+                print("3---------------------------v")
+                print(url)
+                print(users.pai)
+                print(users.user_id)
+                
+                if( users.pai == "" && users.user_id == nil ) {
+                    self.deslogar()
+                } else {
+                    
+                    if self.tabelaLogin == nil {
+                        self.tabelaLogin = TabelaLogin(context: self.context)
+                    }
+                    
+                    let pai = users.pai
+                    let userId = users.user_id
+                    
+                    self.tabelaLogin.pai = pai
+                    self.tabelaLogin.pass = pass
+                    self.tabelaLogin.userId = userId
+                    self.tabelaLogin.user = user
+                    
+                    do {
+                        try self.context.save()
+                    } catch {
+                        print("Nao salvo")
+                    }
+                    
+                    DispatchQueue.main.async {
+                        [unowned self] in
+                        self.performSegue(withIdentifier: "sucessoSegue", sender: self)
+                    }
+                }
+                
+                } catch {
+                    print("Error Chamada Carros")
+                }
+            }.resume()
+    }
+    
+    func deslogar() {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "TabelaLogin")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+            
+        } catch {
+            print ("There was an error")
+        }
     }
     
     func alertaErro(){
@@ -96,8 +149,13 @@ class ViewController: UIViewController {
             
             for i in logins {
                 
-                if (i.pai == "aWc=") {
+                
+                
+                if (i.pai != "" && i.pai != nil && i.user != "") {
                     lista = 1
+                }else{
+                    print("deslogar")
+                    self.deslogar()
                 }
                 print("tableview")
                 print("Nome: \(i.pai)\n Senha:\( i.pass)" )

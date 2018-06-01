@@ -73,6 +73,7 @@ class RESTCAR {
 
         do {
             data = try context.fetch(TabelaLogin.fetchRequest())
+
             
             for i in data {
                 user_id = (i.userId)!
