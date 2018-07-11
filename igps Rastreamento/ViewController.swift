@@ -41,10 +41,7 @@ class ViewController: UIViewController {
                 do {
                     let users = try JSONDecoder().decode(Login.self, from: data!)
                     
-                    print("1---------------------------")
-                    print(url)
-                    print(users.pai)
-                    print(users.resp)
+                   
                     
                     if( users.pai == "" || users.pai == nil || users.resp != 1 ) {
                         self.deslogar()
@@ -76,16 +73,12 @@ class ViewController: UIViewController {
         
         let url = URL(string: jsonURL)
         
-        print(url)
         
         URLSession.shared.dataTask(with: url!){( data, response, error ) in
             do {
                 let users = try JSONDecoder().decode(Login.self, from: data!)
                 
-                print("3---------------------------v")
-                print(url)
-                print(users.pai)
-                print(users.user_id)
+                
                 
                 if( users.pai == "" && users.user_id == nil ) {
                     self.deslogar()
@@ -157,8 +150,7 @@ class ViewController: UIViewController {
                     print("deslogar")
                     self.deslogar()
                 }
-                print("tableview")
-                print("Nome: \(i.pai)\n Senha:\( i.pass)" )
+                
             }
             
             if lista >= 1 {

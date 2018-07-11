@@ -21,7 +21,7 @@ class CarsTableViewCell: UITableViewCell {
     @IBOutlet weak var frota: UILabel!
     @IBOutlet weak var cor: UILabel!
     @IBOutlet weak var ano: UILabel!
-    
+    @IBOutlet weak var velocidade: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

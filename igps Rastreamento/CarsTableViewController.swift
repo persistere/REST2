@@ -76,6 +76,7 @@ class CarsTableViewController: UITableViewController {
         cell.ano?.text = self.cars[indexPath.row].ano_m
         cell.modelo?.text = self.cars[indexPath.row].modelo
         cell.cor?.text = self.cars[indexPath.row].cor
+        cell.velocidade?.text = self.cars[indexPath.row].velocidade
         
         if self.cars[indexPath.row].chave != nil {
             cell.ignicao.downloadedFrom(url: URL(string: self.cars[indexPath.row].chave!)!)

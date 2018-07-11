@@ -23,11 +23,59 @@
 		25692B4E20A9DAF7003FA93A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25692B4D20A9DAF7003FA93A /* Login.swift */; };
 		25692B5020A9DB06003FA93A /* RESTLOGIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25692B4F20A9DB06003FA93A /* RESTLOGIN.swift */; };
 		256A6B1220AB9B73009E27DE /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A6B1120AB9B73009E27DE /* CarsTableViewCell.swift */; };
+		2598A2A520D377330023C232 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2598A2A420D377330023C232 /* GoogleService-Info.plist */; };
 		25DB03E620AC9F3E0045C4E2 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DB03E520AC9F3E0045C4E2 /* MapaViewController.swift */; };
 		25ED6A1920B22755009CD059 /* ConfiguracaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED6A1820B22755009CD059 /* ConfiguracaoViewController.swift */; };
+		A01CCE9F635BBB95D7F758E1 /* Pods_igpsRastreamento.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F37BF60C19F4C9BD0D5D3E /* Pods_igpsRastreamento.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2598A2AF20D3861D0023C232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2598A2A620D3861D0023C232 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 022A9D6F7327C795281B71C961C68A80;
+			remoteInfo = FirebaseCore;
+		};
+		2598A2B120D3861D0023C232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2598A2A620D3861D0023C232 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2AEC6CF3318B10DD8F101254974760D9;
+			remoteInfo = FirebaseMessaging;
+		};
+		2598A2B320D3861D0023C232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2598A2A620D3861D0023C232 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE7FE8165EC85A24EDE816902270E2BA;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		2598A2B520D3861D0023C232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2598A2A620D3861D0023C232 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40131C35F149EEF7E5A334CE32DBBC08;
+			remoteInfo = nanopb;
+		};
+		2598A2B720D3861D0023C232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2598A2A620D3861D0023C232 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 77386B41A687CA76A262EF9886FA89C3;
+			remoteInfo = "Pods-igpsRastreamento";
+		};
+		2598A2B920D3861D0023C232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2598A2A620D3861D0023C232 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7AB65054C27E52DDA11DA7918C780FF5;
+			remoteInfo = Protobuf;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1FDEF59CDAB6FD0757B1CE01 /* Pods-igpsRastreamento.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-igpsRastreamento.debug.xcconfig"; path = "Pods/Target Support Files/Pods-igpsRastreamento/Pods-igpsRastreamento.debug.xcconfig"; sourceTree = "<group>"; };
 		2527C85E20B3929700ABB949 /* AlterarSenhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterarSenhaViewController.swift; sourceTree = "<group>"; };
 		252AC6F120A4EE7700E38061 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		252AC6F320A4F24900E38061 /* RESTCAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCAR.swift; sourceTree = "<group>"; };
@@ -48,8 +96,12 @@
 		25692B4F20A9DB06003FA93A /* RESTLOGIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTLOGIN.swift; sourceTree = "<group>"; };
 		25692B5220A9EF55003FA93A /* Objc-md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-md5.h"; sourceTree = "<group>"; };
 		256A6B1120AB9B73009E27DE /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
+		2598A2A420D377330023C232 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2598A2A620D3861D0023C232 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		25DB03E520AC9F3E0045C4E2 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		25ED6A1820B22755009CD059 /* ConfiguracaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracaoViewController.swift; sourceTree = "<group>"; };
+		A00045CF7B10123650F52BE8 /* Pods-igpsRastreamento.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-igpsRastreamento.release.xcconfig"; path = "Pods/Target Support Files/Pods-igpsRastreamento/Pods-igpsRastreamento.release.xcconfig"; sourceTree = "<group>"; };
+		A3F37BF60C19F4C9BD0D5D3E /* Pods_igpsRastreamento.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_igpsRastreamento.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +110,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				2539237F20ADD9BE00EC6BF6 /* MapKit.framework in Frameworks */,
+				A01CCE9F635BBB95D7F758E1 /* Pods_igpsRastreamento.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C6A7C21416CFA22DDD77D67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2598A2A620D3861D0023C232 /* Pods.xcodeproj */,
+				1FDEF59CDAB6FD0757B1CE01 /* Pods-igpsRastreamento.debug.xcconfig */,
+				A00045CF7B10123650F52BE8 /* Pods-igpsRastreamento.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2539237D20ADD9BE00EC6BF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2539237E20ADD9BE00EC6BF6 /* MapKit.framework */,
+				A3F37BF60C19F4C9BD0D5D3E /* Pods_igpsRastreamento.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,6 +145,7 @@
 				2566CB301FF9B6C3000FE434 /* igps Rastreamento */,
 				2566CB2F1FF9B6C3000FE434 /* Products */,
 				2539237D20ADD9BE00EC6BF6 /* Frameworks */,
+				1C6A7C21416CFA22DDD77D67 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +160,7 @@
 		2566CB301FF9B6C3000FE434 /* igps Rastreamento */ = {
 			isa = PBXGroup;
 			children = (
+				2598A2A420D377330023C232 /* GoogleService-Info.plist */,
 				2566CB351FF9B6C3000FE434 /* Main.storyboard */,
 				2566CB3D1FF9B6C5000FE434 /* LaunchScreen.storyboard */,
 				25DB03E520AC9F3E0045C4E2 /* MapaViewController.swift */,
@@ -116,6 +182,19 @@
 			path = "igps Rastreamento";
 			sourceTree = "<group>";
 		};
+		2598A2A720D3861D0023C232 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2598A2B020D3861D0023C232 /* FirebaseCore.framework */,
+				2598A2B220D3861D0023C232 /* FirebaseMessaging.framework */,
+				2598A2B420D3861D0023C232 /* GoogleToolboxForMac.framework */,
+				2598A2B620D3861D0023C232 /* nanopb.framework */,
+				2598A2B820D3861D0023C232 /* Pods_igpsRastreamento.framework */,
+				2598A2BA20D3861D0023C232 /* Protobuf.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2566CB431FF9B6C6000FE434 /* Build configuration list for PBXNativeTarget "igpsRastreamento" */;
 			buildPhases = (
+				D2048D54A0D7C0DC5703DEAE /* [CP] Check Pods Manifest.lock */,
 				2566CB2A1FF9B6C3000FE434 /* Sources */,
 				2566CB2B1FF9B6C3000FE434 /* Frameworks */,
 				2566CB2C1FF9B6C3000FE434 /* Resources */,
+				71F249B97878842F269AF105 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +233,9 @@
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.WAC = {
 								enabled = 0;
 							};
@@ -170,6 +254,12 @@
 			mainGroup = 2566CB251FF9B6C3000FE434;
 			productRefGroup = 2566CB2F1FF9B6C3000FE434 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2598A2A720D3861D0023C232 /* Products */;
+					ProjectRef = 2598A2A620D3861D0023C232 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2566CB2D1FF9B6C3000FE434 /* igpsRastreamento */,
@@ -177,18 +267,107 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		2598A2B020D3861D0023C232 /* FirebaseCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseCore.framework;
+			remoteRef = 2598A2AF20D3861D0023C232 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2598A2B220D3861D0023C232 /* FirebaseMessaging.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseMessaging.framework;
+			remoteRef = 2598A2B120D3861D0023C232 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2598A2B420D3861D0023C232 /* GoogleToolboxForMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleToolboxForMac.framework;
+			remoteRef = 2598A2B320D3861D0023C232 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2598A2B620D3861D0023C232 /* nanopb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = nanopb.framework;
+			remoteRef = 2598A2B520D3861D0023C232 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2598A2B820D3861D0023C232 /* Pods_igpsRastreamento.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_igpsRastreamento.framework;
+			remoteRef = 2598A2B720D3861D0023C232 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2598A2BA20D3861D0023C232 /* Protobuf.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Protobuf.framework;
+			remoteRef = 2598A2B920D3861D0023C232 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2566CB2C1FF9B6C3000FE434 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2566CB3F1FF9B6C6000FE434 /* LaunchScreen.storyboard in Resources */,
+				2598A2A520D377330023C232 /* GoogleService-Info.plist in Resources */,
 				2566CB4920A26A07000FE434 /* Assets.xcassets in Resources */,
 				2566CB371FF9B6C3000FE434 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71F249B97878842F269AF105 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-igpsRastreamento/Pods-igpsRastreamento-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-igpsRastreamento/Pods-igpsRastreamento-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2048D54A0D7C0DC5703DEAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-igpsRastreamento-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2566CB2A1FF9B6C3000FE434 /* Sources */ = {
@@ -350,8 +529,10 @@
 		};
 		2566CB441FF9B6C6000FE434 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FDEF59CDAB6FD0757B1CE01 /* Pods-igpsRastreamento.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = igpsRastreamento.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JE93M427Z;
@@ -372,8 +553,10 @@
 		};
 		2566CB451FF9B6C6000FE434 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A00045CF7B10123650F52BE8 /* Pods-igpsRastreamento.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = igpsRastreamento.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JE93M427Z;

@@ -1,0 +1,6 @@
+framework module Pods_igpsRastreamento {
+  umbrella header "Pods-igpsRastreamento-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -49,7 +49,7 @@ class RESTCAR {
     
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
-        config.allowsCellularAccess = false
+        config.allowsCellularAccess = true
         config.httpAdditionalHeaders = ["Content-Type":"application/json"]
         config.timeoutIntervalForRequest = 30.0
         config.httpMaximumConnectionsPerHost = 5
